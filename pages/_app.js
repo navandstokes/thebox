@@ -3,7 +3,6 @@ import App, { Container } from 'next/app'
 import Head from 'next/head'
 import api from '../api'
 import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
 import { Waypoint } from 'react-waypoint'
 import '../static/tachyons.css'
 import '../static/generic.css'
@@ -45,7 +44,6 @@ export default class MyApp extends App {
           <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
         </Head>
         <Component {...pageProps} />
-        <Footer items={footerMenu} />
         <Waypoint onEnter={() => {this.setState({nav: false})}}
                   onLeave={() => {this.setState({nav: true})}}>
           <div className="absolute top-0 left-0 w-100 pt4 ">

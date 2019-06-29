@@ -2,29 +2,18 @@ import Link from 'next/link'
 import { Renderer } from './Renderer'
 
 export const Block = props => {
-	let css = 'gutters pb4 tc'
+	// TODO write image gallery code
 	return (
-		<div className={css} id={props.slug}>
-			<Step {...props} />
-		</div>
-	)
-}
-
-const Step = props => {
-	return (
-		<React.Fragment>
-			<div className="mh4">
-				<h4 className="ttu fw4 mb2 f5 silver">{props.title}</h4> 
-				{ (typeof props.subTitle != 'undefined') && 
-					<h2 className="mt0">{props.subTitle}</h2> 
+		<div className='pb4' id={props.slug}>
+			<div>
+				<h4 className="ttu fw4 mb2 f6 silver">{props.title}</h4> 
+				{ (typeof props.subtitle != 'undefined') && 
+					<h2 className="f3 mt0 gray">{props.subtitle}</h2> 
 				}
 			</div>
-			{ (typeof props.image != 'undefined') &&
-				<img src={props.image.fields.file.url} alt={props.image.fields.description} />
-			}
 			{ (typeof props.text != 'undefined') && 
 				<Renderer content={props.text} />
 			}
-		</React.Fragment>
+		</div>
 	)
 }

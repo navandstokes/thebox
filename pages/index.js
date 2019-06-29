@@ -3,7 +3,6 @@ import Link from 'next/link'
 import api from '../api'
 import Head from 'next/head'
 import { Section } from '../components/Section'
-import { AccordionBlock } from '../components/Accordion'
 
 class HomePage extends React.Component {
 	static async getInitialProps() {
@@ -40,7 +39,7 @@ class HomePage extends React.Component {
 				<div className="bg-magnolia pt6-ns min-vh-100">
 				  { (typeof page.fields.sections != 'undefined') &&
 				      page.fields.sections.map((item) => {
-				      	return <Section {...item.fields} />
+				      	return <Section {...item.fields} key={item.sys.id}/>
 				      })
 				  }
 				</div>

@@ -3,11 +3,11 @@ import { Renderer } from './Renderer'
 
 export const Section = props => {
 	return (
-		<div id={props.slug}>
-			<div className="mh4">
+		<div className='gutters' id={props.slug}>
+			<div>
 				<h4 className="ttu fw4 mb2 f5 silver">{props.title}</h4> 
-				{ (typeof props.subTitle != 'undefined') && 
-					<h1 className="mt0">{props.subTitle}</h1> 
+				{ (typeof props.subtitle != 'undefined') && 
+					<h1 className="mt0">{props.subtitle}</h1> 
 				}
 			</div>
 			{ (typeof props.text != 'undefined') && 
