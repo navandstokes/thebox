@@ -1,0 +1,60 @@
+body {
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	/*font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;*/
+	line-height: 1.75;
+	font-size: 0.9375rem;
+}
+
+h1, h2, h3 {
+	font-family: 'Raleway', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	font-weight: 900;
+	line-height: 1.25;
+	color: #3573dd;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+p {
+	color: #777;
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: #3573dd;
+}
+
+a:visited {
+	color: inherit;
+}
+
+.gutters {
+	margin-left: 6vw;
+	margin-right: 6vw;
+}
+
+.gutters-pad {
+	padding-left: 6vw;
+	padding-right: 6vw;
+}
+
+@media screen and (min-width: 48em) {
+	.gutters {
+		margin-left: 20vw;
+		margin-right: 20vw;
+	}
+
+	.gutters-pad {
+		padding-left: 20vw;
+		padding-right: 20vw;
+	}
+}
+
+.h-50vw {
+	height: 50vw;
+}
+
+.h-100vw {
+	height: 100vw;
+}

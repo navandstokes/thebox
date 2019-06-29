@@ -1,0 +1,6 @@
+.next
+node_modules
+.sublime-project
+.sublime-workspace
+.todo
+.env

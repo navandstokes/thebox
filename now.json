@@ -1,0 +1,10 @@
+{
+	"version": 2,
+	"name": "thebox",
+	"builds": [
+		{ "src": "package.json", "use": "@now/next" }
+	],
+	"env": {
+		"SENDGRID_API_KEY": "@sendgrid-api-key"
+	}
+}
