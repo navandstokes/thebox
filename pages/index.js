@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import api from '../api'
 import Head from 'next/head'
-import { Block } from '../components/Block'
+import { Section } from '../components/Section'
 import { AccordionBlock } from '../components/Accordion'
 
 class HomePage extends React.Component {
@@ -38,13 +38,9 @@ class HomePage extends React.Component {
 				        }} />
 				}
 				<div className="bg-magnolia pt6-ns min-vh-100">
-				  { (typeof page.fields.blocks != 'undefined') &&
-				      page.fields.blocks.map((item) => {
-				        if (item.sys.contentType.sys.id == 'pageBlock') {
-				          return <Block {...item.fields} key={item.sys.id} />
-				        } else if (item.sys.contentType.sys.id == 'pageAccordion') {
-				          return <AccordionBlock {...item.fields} key={item.sys.id} />
-				        }
+				  { (typeof page.fields.sections != 'undefined') &&
+				      page.fields.sections.map((item) => {
+				      	return <Section {...item.fields} />
 				      })
 				  }
 				</div>
