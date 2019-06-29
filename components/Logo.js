@@ -5,8 +5,8 @@ export const Logo = props => {
 	return (
 		<div className={props.className} style={props.style}>
 			<Link href="/">
-				<a className="db h-100 w-100">
-					<h2>TheBox</h2>
+				<a>
+					<h2 className="dib f4 f2-ns silver">TheBox</h2>
 				</a>
 			</Link>
 		</div>
