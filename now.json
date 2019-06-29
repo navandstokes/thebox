@@ -4,6 +4,16 @@
 	"builds": [
 		{ "src": "package.json", "use": "@now/next" }
 	],
+	"routes": [
+	  {
+		"src": "/(?<slug>[^/]+)$",
+		"dest": "/#$slug"
+	  },
+	  {
+	    "src": "/(.*)",
+	    "dest": "/$1"
+	  }
+	],
 	"env": {
 		"SENDGRID_API_KEY": "@sendgrid-api-key"
 	}
