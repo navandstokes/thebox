@@ -1,8 +1,9 @@
 import { Block } from './Block'
+import { Renderer } from './Renderer'
 
 export const Section = props => {
 	return (
-		<div>
+		<div id={props.slug}>
 			<div className="mh4">
 				<h4 className="ttu fw4 mb2 f5 silver">{props.title}</h4> 
 				{ (typeof props.subTitle != 'undefined') && 

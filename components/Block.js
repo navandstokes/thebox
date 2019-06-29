@@ -4,7 +4,7 @@ import { Renderer } from './Renderer'
 export const Block = props => {
 	let css = 'gutters pb4 tc'
 	return (
-		<div className={css}>
+		<div className={css} id={props.slug}>
 			<Step {...props} />
 		</div>
 	)
