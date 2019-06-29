@@ -8,7 +8,7 @@ export const Navbar = props => {
 			<div className="w4 mh4">
 				<Logo color={props.color} />
 			</div>
-			<div className="dn flex-ns flex-row w-60 justify-between">
+			<div className="flex flex-row w-80 w-60-ns justify-between">
 				<Menu items={props.items} color={props.color}/>
 			</div>
 		</div>

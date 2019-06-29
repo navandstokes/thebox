@@ -6,11 +6,11 @@ import { Block } from '../components/Block'
 import { AccordionBlock } from '../components/Accordion'
 
 class HomePage extends React.Component {
-	static async getInitialProps({ query: { slug }, res }) {
+	static async getInitialProps() {
 	  let page = {'fields': ''}
 
 	  await api.getEntries({
-	  	'sys.id': `73GYEM1cdaCAzAvAHCkRi6`,
+	  	'sys.id': `55s4UuuH3SkXmctxBha6o0`,
 	  	include: `3`
 	  }).then(data => {
 	    page = data.items[0]
