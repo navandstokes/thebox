@@ -14,6 +14,27 @@ export const Block = props => {
 			{ (typeof props.text != 'undefined') && 
 				<Renderer content={props.text} />
 			}
+			{ (typeof props.images != 'undefined') &&
+				<Gallery images={props.images} />
+			}
+		</div>
+	)
+}
+
+const Gallery = props => {
+	let GalleryEl = props.images.map(item => {
+		return (
+			<div className="dib w-70 mr3">
+				<img src={item.fields.file.url} alt="" className="br4" />
+			</div>
+		)
+	})
+	return (
+		<div className="w-100 overflow-x-scroll"
+			style={{
+				whiteSpace: 'nowrap'
+			}}>
+			{GalleryEl}
 		</div>
 	)
 }
