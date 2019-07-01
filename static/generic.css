@@ -55,6 +55,15 @@ a:visited {
 	height: 50vw;
 }
 
+.h-75vw {
+	height: 75vw;
+}
+
 .h-100vw {
 	height: 100vw;
+}
+
+.object {
+	object-fit: cover;
+	object-position: center left;
 }
