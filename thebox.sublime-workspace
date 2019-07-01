@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"which",
+				"whichBot"
+			],
+			[
 				"form",
 				"formDataSerialized"
+			],
+			[
+				"formD",
+				"formDataSerialized.email"
 			],
 			[
 				"BotS",
@@ -140,10 +148,6 @@
 				"galleryHelp"
 			],
 			[
-				"which",
-				"which_alice〔variable〕"
-			],
-			[
 				"main",
 				"mainitem"
 			],
@@ -218,6 +222,14 @@
 			[
 				"quick",
 				"Git: Quick Commit (repo)"
+			],
+			[
+				"quikc",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
 			],
 			[
 				"wrap",
@@ -488,10 +500,6 @@
 				"Set Syntax: JavaScript (Babel)"
 			],
 			[
-				"quikc",
-				"Git: Quick Commit (repo)"
-			],
-			[
 				"adda",
 				"Git: Add All"
 			],
@@ -718,10 +726,6 @@
 			[
 				"color ",
 				"UI: Select Color Scheme"
-			],
-			[
-				"theme",
-				"Material Theme: Advanced configuration"
 			]
 		],
 		"width": 453.0
@@ -752,15 +756,15 @@
 	[
 		"/C/xampp/htdocs/React/cbc-next/api/email.js",
 		"/C/xampp/htdocs/React/cbc-next/now.json",
+		"/C/xampp/htdocs/React/cbc-next/pages/page.js",
+		"/C/xampp/htdocs/React/cbc-next/pages/_app.js",
 		"/C/xampp/htdocs/React/cbc-next/components/Bot.js",
+		"/C/xampp/htdocs/React/cbc-next/static/form.css",
 		"/C/xampp/htdocs/React/cbc-next/static/generic.css",
 		"/C/xampp/htdocs/React/cbc-next/.nowignore",
 		"/C/xampp/htdocs/React/cbc-next/pages/index.js",
 		"/C/xampp/htdocs/React/cbc-next/.env",
 		"/C/xampp/htdocs/React/cbc-next/package.json",
-		"/C/xampp/htdocs/React/cbc-next/pages/page.js",
-		"/C/xampp/htdocs/React/cbc-next/pages/_app.js",
-		"/C/xampp/htdocs/React/cbc-next/static/form.css",
 		"/C/xampp/htdocs/React/cbc-next/email.js",
 		"/C/xampp/htdocs/React/cbc-next/.gitignore",
 		"/C/xampp/htdocs/React/cbc-next/node_modules/conversational-form/src/scripts/cf/ConversationalForm.plugin.js",
@@ -933,6 +937,11 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
@@ -952,11 +961,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1008,6 +1024,18 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"pages\\page.js"
+			],
+			[
+				"sc",
+				"static\\form.css"
+			],
+			[
+				"_app",
+				"pages\\_app.js"
+			],
+			[
 				"gener",
 				"static\\generic.css"
 			],
@@ -1024,20 +1052,12 @@
 				"pages\\index.js"
 			],
 			[
-				"page",
-				"pages\\page.js"
-			],
-			[
 				"package",
 				"package.json"
 			],
 			[
 				".env",
 				".env"
-			],
-			[
-				"_app",
-				"pages\\_app.js"
 			],
 			[
 				"emai",
@@ -1514,10 +1534,6 @@
 			[
 				"json",
 				"package.json"
-			],
-			[
-				"inde",
-				"src\\index.scss"
 			]
 		],
 		"width": 0.0
