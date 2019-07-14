@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Transition } from 'react-spring/renderprops'
+import { Transition } from 'react-spring/renderprops.cjs'
 import { Icon } from './Icon'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 

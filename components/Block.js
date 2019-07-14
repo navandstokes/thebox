@@ -18,7 +18,7 @@ export const Block = props => {
 			</div>
 			<div>
 				{ (typeof props.images != 'undefined') &&
-					<Gallery images={props.images} />
+					<Gallery images={props.images} ns={props.ns} />
 				}
 			</div>
 		</div>

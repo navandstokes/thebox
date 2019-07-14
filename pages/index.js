@@ -40,7 +40,7 @@ class HomePage extends React.Component {
 				<div className="bg-magnolia pt6-ns min-vh-100">
 				  { (typeof page.fields.sections != 'undefined') &&
 				      page.fields.sections.map((item) => {
-				      	return <Section {...item.fields} key={item.sys.id}/>
+				      	return <Section {...item.fields} key={item.sys.id} ns={this.props.ns} />
 				      })
 				  }
 				</div>

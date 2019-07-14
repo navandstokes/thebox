@@ -2,18 +2,18 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import api from '../api'
+import ReactPixel from 'react-facebook-pixel'
 import { Navbar } from '../components/Navbar'
 import { Waypoint } from 'react-waypoint'
 import '../static/tachyons.css'
 import '../static/generic.css'
-import '../static/form.css'
 
 export default class MyApp extends App {
   constructor() {
     super()
     this.state = {
-      nav: false,
-      bot: false
+      width: 0,
+      height: 0
     }
   }
 
@@ -25,6 +25,28 @@ export default class MyApp extends App {
     }
 
     return { pageProps }
+  }
+
+  _handleResize = () => {
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
+  }
+
+  componentDidMount = () => {
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
+    window.addEventListener('resize', this._handleResize)
+
+    ReactPixel.init('487591398674776')
+    ReactPixel.pageView()
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this._handleResize)
   }
 
   render () {
@@ -46,7 +68,7 @@ export default class MyApp extends App {
         <Navbar items={menu} color="white" nav={this.state.nav} />
         <Waypoint onEnter={() => {this.setState({nav: false})}}
                   onLeave={() => {this.setState({nav: true})}} />
-        <Component {...pageProps} />
+        <Component ns={this.state.width > 960} {...pageProps} />
       </Container>
     )
   }

@@ -15,7 +15,7 @@ export const Section = props => {
 			}
 			{(typeof props.items != 'undefined') &&
 				props.items.map((item) => {
-					return <Block {...item.fields} key={item.sys.id} />
+					return <Block {...item.fields} key={item.sys.id} ns={props.ns} />
 				})
 			}
 		</div>
