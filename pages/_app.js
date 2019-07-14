@@ -4,6 +4,7 @@ import Head from 'next/head'
 import api from '../api'
 import ReactPixel from 'react-facebook-pixel'
 import { Navbar } from '../components/Navbar'
+import { Circle } from '../components/Circle'
 import { Waypoint } from 'react-waypoint'
 import '../static/tachyons.css'
 import '../static/generic.css'
@@ -41,7 +42,7 @@ export default class MyApp extends App {
     })
     window.addEventListener('resize', this._handleResize)
 
-    ReactPixel.init('487591398674776')
+    ReactPixel.init('503871493488750')
     ReactPixel.pageView()
   }
 
@@ -69,6 +70,7 @@ export default class MyApp extends App {
         <Waypoint onEnter={() => {this.setState({nav: false})}}
                   onLeave={() => {this.setState({nav: true})}} />
         <Component ns={this.state.width > 960} {...pageProps} />
+        <Circle />
       </Container>
     )
   }
