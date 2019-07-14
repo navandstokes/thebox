@@ -41,13 +41,13 @@ a:visited {
 
 @media screen and (min-width: 48em) {
 	.gutters {
-		margin-left: 20vw;
-		margin-right: 20vw;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 
 	.gutters-pad {
-		padding-left: 20vw;
-		padding-right: 20vw;
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 }
 
