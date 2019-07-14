@@ -42,7 +42,7 @@ export default class MyApp extends App {
     })
     window.addEventListener('resize', this._handleResize)
 
-    ReactPixel.init('503871493488750')
+    ReactPixel.init('643633719447315')
     ReactPixel.pageView()
   }
 
