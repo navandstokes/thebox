@@ -17,6 +17,7 @@
     "@sendgrid/mail": "^6.4.0",
     "@typeform/embed": "^0.9.3",
     "@zeit/next-css": "^1.0.1",
+    "body-scroll-lock": "^2.6.4",
     "contentful": "^7.5.1",
     "dotenv": "^8.0.0",
     "lodash": "^4.17.11",
