@@ -68,13 +68,15 @@ const GalleryModal = props => {
 					width: props.ns ? '935px' : '100%',
 					height: props.ns ? '' : '100vh'
 				}}>
-				<a className="absolute top-0 left-0 w-100 h-100 pointer pt4 pl4"
+				<a className="absolute top-0 left-0 w-100 h-100 pointer"
 					onClick={(e) => {props.handleClick(e)}}>
 					{ !props.ns &&
-						<Icon icon="ArrowLeftIcon" size="1.5rem" className="ma1" />
+						<div className="bg-blue white br-100 dib h2 w2 flex justify-center items-center ma3">
+							<Icon icon="ArrowLeftIcon" size="1.5em" />
+						</div>
 					}
 				</a>
-				<img src={props.file.url + "?fit=fill&w=600"} 
+				<img src={props.file.url + "?fit=pad&w=600&h=600"} 
 					className="object" width={props.ns ? "600" : "100%"} />
 				<Transition
 					items={active}
