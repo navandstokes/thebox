@@ -7,7 +7,7 @@ export const Block = props => {
 	// TODO write image gallery code
 	return (
 		<div className="pb4 flex flex-column flex-row-l" id={props.slug}>
-			<div>
+			<div style={{flexBasis: '40%'}}>
 				<h4 className="ttu fw4 mb2 f6 silver">{props.title}</h4> 
 				{ (typeof props.subtitle != 'undefined') && 
 					<h2 className="f3 mt0 gray">{props.subtitle}</h2> 
@@ -16,7 +16,7 @@ export const Block = props => {
 					<Renderer content={props.text} />
 				}
 			</div>
-			<div>
+			<div className="pl6-l pt6-l" style={{flexBasis: '60%'}}>
 				{ (typeof props.images != 'undefined') &&
 					<Gallery images={props.images} ns={props.ns} />
 				}

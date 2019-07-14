@@ -31,13 +31,13 @@ const GalleryImage = props => {
 		toggleActive(!active)
 	}
 
-	const imageWidth = props.ns ? "15vw" : "calc(33% - 0.5rem)"
+	const imageWidth = props.ns ? "calc(50% - 0.5rem)" : "calc(33.33% - 0.5rem)"
 
 	return (
 		<React.Fragment>
 			<div className={"mr2 mb2 " + (!active ? "dim" : "")} id="galleryImage"
 				style={{
-					width: "calc(33.33% - 0.5rem)"
+					width: imageWidth
 				}}>
 				<a className="pointer" onClick={(e) => {handleClick(e)}}>
 					<img src={props.file.url + "?fit=fill&w=360&h=360"} 
