@@ -16,7 +16,7 @@ export const Block = props => {
 					<Renderer content={props.text} />
 				}
 			</div>
-			<div className="pl6-l pt6-l w-60-l">
+			<div className="pl6-l pt5-l mt4-l w-60-l">
 				{ (typeof props.images != 'undefined') &&
 					<Gallery images={props.images} ns={props.ns} />
 				}

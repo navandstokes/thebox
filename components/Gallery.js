@@ -31,7 +31,7 @@ const GalleryImage = props => {
 		toggleActive(!active)
 	}
 
-	const imageWidth = props.ns ? "calc(50% - 0.5rem)" : "calc(33.33% - 0.5rem)"
+	const imageWidth = props.ns ? "calc(25% - 0.5rem)" : "calc(33.33% - 0.5rem)"
 
 	return (
 		<React.Fragment>
@@ -66,7 +66,7 @@ const GalleryModal = props => {
 				style={{
 					display: active ? 'block' : 'none',
 					width: props.ns ? '935px' : '100%',
-					height: props.ns ? '600px' : '100vh'
+					height: props.ns ? '' : '100vh'
 				}}>
 				<a className="absolute top-0 left-0 w-100 h-100 pointer pt4 pl4"
 					onClick={(e) => {props.handleClick(e)}}>
@@ -74,7 +74,7 @@ const GalleryModal = props => {
 						<Icon icon="ArrowLeftIcon" size="1.5rem" className="ma1" />
 					}
 				</a>
-				<img src={props.file.url + "?fit=fill&w=600&h=600"} 
+				<img src={props.file.url + "?fit=fill&w=600"} 
 					className="object" width={props.ns ? "600" : "100%"} />
 				<Transition
 					items={active}
