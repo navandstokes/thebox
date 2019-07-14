@@ -1,17 +1,14 @@
 import Link from 'next/link'
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export const Renderer = props => {
 	const options = {
 		renderNode: {
-		    '[INLINES.HYPERLINK]': node => {
-		    	return <a href={node.data.uri}><span className="bg-blue white f4 pa2">{node.content[0].value}</span></a>
-		    },
-		    '[INLINES.ENTRY-HYPERLINK]': async (node, children) => {
-		    	const reference = await resolveDependencies(node.data.target);
-		    	return <Link href={'/page?slug=' + reference.fields.slug} passHref><a>{children}</a></Link>
+		    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+		    	return <img src={node.data.target.fields.file.url + "?w=260"} />
 		    }
-		}
+		} 
 	}
 	return (
 		<div>
