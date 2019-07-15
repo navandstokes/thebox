@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Transition } from 'react-spring/renderprops.cjs'
 import { Icon } from './Icon'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import Img from './Img'
 
 export const Gallery = props => {
 	let GalleryEl = props.images.map(item => {
@@ -59,16 +60,16 @@ const GalleryModal = props => {
 				display: active ? (props.ns ? 'flex' : 'block') : 'none',
 				background: props.ns ? 'rgba(0,0,0,0.5)' : ''
 			}}>
-			<a className="dn db-l absolute top-0 left-0 w-100 h-100 pointer"
+			<a className="dn db-l absolute top-0 left-0 w-100 h-100 pointer z-9999"
 				onClick={(e) => {props.handleClick(e)}}>
 			</a>
 			<div className="bg-white relative"
 				style={{
 					display: active ? 'block' : 'none',
 					width: props.ns ? '935px' : '100%',
-					height: props.ns ? '' : '100vh'
+					height: props.ns ? '600px' : '100vh'
 				}}>
-				<a className="absolute top-0 left-0 w-100 h-100 pointer"
+				<a className="absolute top-0 left-0 w-100 h-100 pointer z-9999"
 					onClick={(e) => {props.handleClick(e)}}>
 					{ !props.ns &&
 						<div className="bg-blue white br-100 dib h2 w2 flex justify-center items-center ma3">
@@ -76,8 +77,9 @@ const GalleryModal = props => {
 						</div>
 					}
 				</a>
-				<img src={props.file.url + "?fit=pad&w=600&h=600"} 
-					className="object" width={props.ns ? "600" : "100%"} />
+				<div width="600" style={{minHeight: '50vh'}}>
+					<Img src={props.file.url} />
+				</div>
 				<Transition
 					items={active}
 					unique={true}
