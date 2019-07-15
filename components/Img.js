@@ -93,7 +93,7 @@ class Img extends React.Component {
                 margin: 0
             },
             lqip: {
-                width: '100%',
+                // width: '100%',
                 filter: 'blur(5px)',
                 opacity: 1,
                 transition: 'all 0.5s ease-in'
