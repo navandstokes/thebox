@@ -31,7 +31,7 @@ class HomePage extends React.Component {
 				{ (typeof page.fields.banner != 'undefined') && 
 				  <div className="h-50vw vh-100-ns w-100" 
 				        style={{ 
-				          backgroundImage: 'url(' + page.fields.banner.fields.file.url + ')',
+				          backgroundImage: 'url(' + page.fields.banner.fields.file.url + '?w=1366)',
 				          backgroundSize: 'cover',
 				          backgroundPosition: 'center center',
 				          zIndex: '-1'
