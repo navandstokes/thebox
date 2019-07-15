@@ -41,7 +41,7 @@ const GalleryImage = props => {
 					width: imageWidth
 				}}>
 				<a className="pointer" onClick={(e) => {handleClick(e)}}>
-					<img src={props.file.url + "?fit=fill&w=360&h=360"} 
+					<img src={props.file.url + "?fit=fill&w=120&h=120"} 
 						className="object w-100 h-100" />
 				</a>
 				{active &&
