@@ -21,8 +21,8 @@ p {
 }
 
 a, a:hover {
-	/*text-decoration: none;*/
-	color: #3573dd;
+	text-decoration: none;
+	color: #3573dd !important;
 }
 
 a:visited {

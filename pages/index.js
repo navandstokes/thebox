@@ -37,7 +37,7 @@ class HomePage extends React.Component {
 				          zIndex: '-1'
 				        }} />
 				}
-				<div className="bg-magnolia pt6-ns min-vh-100">
+				<div className="bg-magnolia pt6-ns min-vh-100 flex-l gutters flex-wrap">
 				  { (typeof page.fields.sections != 'undefined') &&
 				      page.fields.sections.map((item) => {
 				      	return <Section {...item.fields} key={item.sys.id} ns={this.props.ns} />
