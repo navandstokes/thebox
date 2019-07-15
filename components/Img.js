@@ -78,9 +78,9 @@ class Img extends React.Component {
         options['fit'] = fit || 'pad'
 
         // If a format has not been specified, detect webp support
-        if (!options['fm'] && this.isWebpSupported) {
-            options['fm'] = 'webp'
-        }
+        // if (!options['fm'] && this.isWebpSupported) {
+        //     options['fm'] = 'webp'
+        // }
 
         // Loop through option prop and build queryString
         Object.keys(options).map((option, i) => {
@@ -114,8 +114,6 @@ class Img extends React.Component {
             styles.lqip.opacity = 0
         }
 
-        const missingALt = 'ALT TEXT IS REQUIRED'
-
         return(
         <React.Fragment>
                 <figure
@@ -128,20 +126,25 @@ class Img extends React.Component {
                             <React.Fragment>
 
                                 {/* Load fullsize image in background */}
-                                <img 
-                                    onLoad={ () => { this.setState({ fullsizeLoaded: true }) } }
-                                    style={ styles.fullsize }
-                                    src={`${ src }${ queryString }`}
-                                    alt={ alt || missingALt }
-                                />
+                                <picture onLoad={ () => { this.setState({ fullsizeLoaded: true }) } }
+                                        style={ styles.fullsize }>
+                                    <source sourceset={`${ src }${ queryString }?fm=webp`} type="image/webp" />
+                                    <source sourceset={`${ src }${ queryString }`} type="image/jpeg" />
+                                    <img 
+                                        src={`${ src }${ queryString }`}
+                                    />
+                                </picture>
 
                                 {/* Load LQIP in foreground */}
-                                <img 
-                                    onLoad={ () => { this.setState({ lqipLoaded: true }) } }
-                                    style={ styles.lqip }
-                                    src={`${ src }${ lqipQueryString }`} 
-                                    alt={ alt || missingALt } 
-                                />
+                                <picture
+                                        onLoad={ () => { this.setState({ lqipLoaded: true }) } }
+                                        style={ styles.lqip }>
+                                    <source sourceset={`${ src }${ lqipQueryString }`} type="image/webp" />
+                                    <source sourceset={`${ src }${ lqipQueryString }`} type="image/jpeg" />
+                                    <img 
+                                        src={`${ src }${ lqipQueryString }`} 
+                                    />
+                                </picture>
                             </React.Fragment>
                         ) : null
                     }            
