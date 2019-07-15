@@ -24,9 +24,12 @@ class Img extends React.Component {
 
     componentDidMount = () => {
         // const width = this.imgRef.current.clientWidth
+        const width = this.props.width ? this.props.width : 600
+        const height = this.props.height ? this.props.height : 600
 
         this.setState({
-            width: 600
+            width: width,
+            height: height
         })
         
         this.handleViewport()
@@ -63,16 +66,16 @@ class Img extends React.Component {
     render() {
 
         // Destructure props and state
-        const { src, alt, options = {}, ext = 'jpg' } = this.props
-        const { isInViewport, width, fullsizeLoaded } = this.state
+        const { src, alt, options = {}, ext = 'jpg', fit } = this.props
+        const { isInViewport, width, fullsizeLoaded, height } = this.state
 
         // Create an empty query string
         let queryString = ''
 
         // If width is specified, otherwise use auto-detected width
         options['w'] = options['w'] || width
-        options['h'] = options['h'] || width
-        options['fit'] = 'pad'
+        options['h'] = options['h'] || height
+        options['fit'] = fit || 'pad'
 
         // If a format has not been specified, detect webp support
         if (!options['fm'] && this.isWebpSupported) {
