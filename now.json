@@ -16,5 +16,6 @@
 	],
 	"env": {
 		"SENDGRID_API_KEY": "@sendgrid-api-key"
-	}
+	},
+	"regions": ["syd1"]
 }
