@@ -4,7 +4,7 @@ import Head from 'next/head'
 import api from '../api'
 import ReactPixel from 'react-facebook-pixel'
 import { Navbar } from '../components/Navbar'
-import { Circle } from '../components/Circle'
+import { Circle, Messenger } from '../components/Circle'
 import { Waypoint } from 'react-waypoint'
 import '../static/tachyons.css'
 import '../static/generic.css'
@@ -70,6 +70,7 @@ export default class MyApp extends App {
         <Waypoint onEnter={() => {this.setState({nav: false})}}
                   onLeave={() => {this.setState({nav: true})}} />
         <Component ns={this.state.width > 960} {...pageProps} />
+        <Messenger />
         <Circle />
       </Container>
     )
