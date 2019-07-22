@@ -44,7 +44,7 @@ class HomePage extends React.Component {
 				        }} />
 				}
 				{ (typeof video.fields.file.url != 'undefined') &&
-				<div className="w-100 flex-ns justify-center items-center">
+				<div className="w-100 flex-ns justify-center items-center" style={{minHeight: '75vh'}}>
 					<div className="w-100 w-25-ns">
 						<Player poster={videoCover.fields.file.url}>
 							<source src={video.fields.file.url} />
