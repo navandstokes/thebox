@@ -33,6 +33,7 @@ class HomePage extends React.Component {
 				<Head>
 					<title>The Box | Caravan Tiny Home Hybrid</title>
 				</Head>
+				<div className="h3"></div>
 				{ (typeof page.fields.banner != 'undefined') && 
 				  <div className="dn db-ns h-50vw vh-100-ns w-100 absolute top-0 left-0" 
 				        style={{ 

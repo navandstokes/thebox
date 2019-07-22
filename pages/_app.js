@@ -112,7 +112,7 @@ export default class MyApp extends App {
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:900&display=swap" rel="stylesheet" />
           <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
         </Head>
-        <Navbar items={menu} color="white" nav={this.state.nav} />
+        <Navbar items={menu} color="white" nav={true} />
         <Component ns={this.state.width > 960} {...pageProps} />
         <Messenger />
         <Circle />
