@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 
 export const Menu = props => {
@@ -17,8 +17,8 @@ export const Menu = props => {
 		)
 	})
 	return (
-		<React.Fragment>
+		<Fragment>
 			{Links}
-		</React.Fragment>
+		</Fragment>
 	)
 }

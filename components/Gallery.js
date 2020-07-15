@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Transition } from 'react-spring/renderprops.cjs'
-import { Icon } from './Icon'
+import { Icon } from 'components/Icon'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
-import Img from './Img'
+import Img from 'components/Img'
 
 export const Gallery = props => {
 	let GalleryEl = props.images.map(item => {

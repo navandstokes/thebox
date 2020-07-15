@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { Renderer } from './Renderer'
-import { Gallery } from './Gallery'
+import { Renderer } from 'components/Renderer'
+import { Gallery } from 'components/Gallery'
 
 export const Block = props => {
 	const hasImages = typeof props.images != 'undefined'

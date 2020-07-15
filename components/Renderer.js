@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import Img from './Img'
+import Img from 'components/Img'
 
 export const Renderer = props => {
 	const options = {

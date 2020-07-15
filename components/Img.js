@@ -1,7 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-// import { TueriContext } from './Provider'
-// import kebabCase from 'lodash.kebabcase'
 
 class Img extends React.Component {
 

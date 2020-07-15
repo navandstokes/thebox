@@ -1,5 +1,4 @@
-import { Icon } from './Icon'
-import ReactPixel from 'react-facebook-pixel'
+import { Icon } from 'components/Icon'
 
 export const Circle = props => {
 	return (
