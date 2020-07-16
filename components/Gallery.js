@@ -84,9 +84,12 @@ const GalleryInner = props => {
 				</div>
 			</div>
 			<div className={styles.modalDetails + " bg-magnolia pa3 pt2 pa4-l pb2-l flex-l flex-column justify-between"} >
-				<a className="dn db-l absolute pointer w2 h2 white" style={{top: '-2.5rem', right: 0}}
+				<a className="dn db-l absolute pointer w2 h2 white" style={{top: '-1.5rem', right: 0}}
 					onClick={props.removeModal}>
-					<Icon icon="XIcon" size="1.5rem" className="ma1" />
+					<svg style={{position: 'absolute', left: 0, top: 0}} stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg">
+						<line x1="18" y1="6" x2="6" y2="18" />
+						<line x1="6" y1="6" x2="18" y2="18" />
+					</svg>
 				</a>
 				<div className="flex flex-row flex-column-l flex-wrap justify-between">
 					<h3 className="fw5">{props.title}</h3>
