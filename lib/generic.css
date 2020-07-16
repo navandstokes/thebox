@@ -5,7 +5,7 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 body {
-	background-color: #fffdfc;
+	background-color: #EFF1F3;
 	color: #242424;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
     font-weight: 400;
@@ -27,12 +27,11 @@ h2 {
 }
 
 p {
-	color: #777;
+	opacity: 0.8;
 }
 
 a, a:hover {
 	text-decoration: none;
-	color: #3573dd !important;
 }
 
 a:visited {
