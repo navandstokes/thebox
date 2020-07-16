@@ -6,13 +6,12 @@ import { Gallery } from 'components/Gallery'
 export const Block = props => {
 	const hasImages = typeof props.images != 'undefined'
 	return (
-		<div className={"pb4 flex flex-column flex-row-l w-100 " + (hasImages ? "w-100-l" : "w-30-l dib")} id={props.slug}
+		<div className={"pb4 flex flex-column flex-row-l w-100 " + (hasImages ? "w-100-l" : "w-30-l dib pa3")} id={props.slug}
 			style={{
 				backgroundColor: hasImages ? 'transparent' : '#F6F5F4',
 				color: '#2A2B2A',
 				borderRadius: hasImages ? '0px' : '1rem',
 				margin: hasImages ? '0px' : '1rem 1rem 0 0',
-				padding: hasImages ? '0px' : '1rem',
 			}}
 		>
 		<style jsx>{`
