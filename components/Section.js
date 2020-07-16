@@ -13,11 +13,13 @@ export const Section = props => {
 					<Renderer content={props.text} />
 				}
 			</div>
-			{(typeof props.items != 'undefined') &&
-				props.items.map((item, index) => {
-					return <Block {...item.fields} key={item.sys.id} ns={props.ns} first={index == 0} />
-				})
-			}
+			<div className="flex flex-wrap">
+				{(typeof props.items != 'undefined') &&
+					props.items.map((item, index) => {
+						return <Block {...item.fields} key={item.sys.id} />
+					})
+				}				
+			</div>
 		</>
 	)
 }
