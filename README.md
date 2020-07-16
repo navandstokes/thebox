@@ -1,3 +1,5 @@
+**Has been sold.**
+
 Get ready for summer! This year-round custom built robust caravan will see you through all the seasons. The bright yet warm interior design is closer to a tiny house on wheels but without losing a single bit of mobility. This was built to travel and for permanent living - suitable for both. The unique design is both lightweight but spacious. The top lifts up to its full height with solid, well insulated walls.
 
 - Single Axel, Lightweight trailer (1200 KG) with brakes
