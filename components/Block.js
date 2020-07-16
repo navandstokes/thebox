@@ -9,7 +9,8 @@ export const Block = props => {
 		<div className={"pb4 flex flex-column flex-row-l " + (hasImages ? "" : "block")} id={props.slug}
 			style={{
 				width: (hasImages || !props.ns) ? '100%' : 'calc(33.33% - 1rem)',
-				backgroundColor: hasImages ? 'white' : '#f4f4f4',
+				backgroundColor: hasImages ? 'transparent' : '#F6F5F4',
+				color: '#2A2B2A',
 				borderRadius: hasImages ? '0px' : '1rem',
 				margin: hasImages ? '0px' : '1rem',
 				padding: hasImages ? '0px' : '1rem',
@@ -25,9 +26,9 @@ export const Block = props => {
 			}
 		`}</style>
 			<div className={hasImages ? "w-40-l" : ""}>
-				<h2 className="ttu fw4 mb2 f6 silver tracked">{props.title}</h2> 
+				<h2 className="ttu fw4 mb2 f7 o-60" style={{letterSpacing: '0.05em'}}>{props.title}</h2> 
 				{ (typeof props.subtitle != 'undefined') && 
-					<h3 className="f3 mt0 gray">{props.subtitle}</h3> 
+					<h3 className="f3 mt0 fw6">{props.subtitle}</h3> 
 				}
 				{ (typeof props.text != 'undefined') && 
 					<Renderer content={props.text} />

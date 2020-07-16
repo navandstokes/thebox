@@ -26,7 +26,7 @@ const HomePage = ({ page }) => {
 			        }} />
 			}
 			<div className="h6 dn db-ns" />
-			<div className="bg-white mt7-ns min-vh-100 gutters pa5-ns">
+			<div className="mt7-ns min-vh-100 gutters pa5-ns">
 			  { (typeof page.fields.sections != 'undefined') &&
 			      page.fields.sections.map((item) => {
 			      	return <Section {...item.fields} key={item.sys.id} />
