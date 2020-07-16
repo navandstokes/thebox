@@ -46,6 +46,7 @@ const Squiggle = ({ children, href }) => {
 					padding-right: .15rem;
 					font-size: 0.9rem;
 					font-weight: 600;
+					cursor: pointer;
 				}
 				a::before {
 					content: "";
@@ -57,10 +58,11 @@ const Squiggle = ({ children, href }) => {
 					bottom: 0;
 					z-index: -1;
 					will-change: width;
-					transform-origin: left bottom
+					transform-origin: left bottom;
+					transition: all 0.5s ease;
 				}
 				a:hover::before {
-					width: 50%;
+					width: 80%;
 				}
 			`}
 		</style>

@@ -22,11 +22,12 @@ const HomePage = ({ page }) => {
 			          backgroundImage: 'url(' + page.fields.banner.fields.file.url + '?w=1366)',
 			          backgroundSize: 'cover',
 			          backgroundPosition: 'center center',
-			          zIndex: '-1'
+			          zIndex: '-1',
+			          paddingBottom: '56%'
 			        }} />
 			}
-			<div className="h6 dn db-ns" />
-			<div className="mt7-ns min-vh-100 gutters pa5-ns">
+			<div className="h5 dn db-ns" />
+			<div className="mt7-ns min-vh-100 gutters pa5-ns" style={{backgroundColor: '#FFFBFF'}}>
 			  { (typeof page.fields.sections != 'undefined') &&
 			      page.fields.sections.map((item) => {
 			      	return <Section {...item.fields} key={item.sys.id} />
