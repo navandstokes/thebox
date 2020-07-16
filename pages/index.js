@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Head from 'next/head'
 import api from 'api'
 import { Section } from 'components/Section'
@@ -12,14 +11,13 @@ const HomePage = ({ page }) => {
 	    ]
 
 	return (
-		<Fragment>
+		<>
 			<Head>
 				<title>The Box | Caravan Tiny Home Hybrid</title>
 			</Head>
 			<Navbar items={menu} />
-			<div className="h3"></div>
 			{ (typeof page.fields.banner != 'undefined') && 
-			  <div className="dn db-ns h-50vw vh-100-ns w-100 absolute top-0 left-0" 
+			  <div className="vh-100-ns w-100 absolute-ns top-0 left-0" 
 			        style={{ 
 			          backgroundImage: 'url(' + page.fields.banner.fields.file.url + '?w=1366)',
 			          backgroundSize: 'cover',
@@ -27,14 +25,15 @@ const HomePage = ({ page }) => {
 			          zIndex: '-1'
 			        }} />
 			}
-			<div className="bg-magnolia pt6-ns min-vh-100 flex-l gutters flex-wrap">
+			<div className="h6 dn db-ns" />
+			<div className="bg-white mt7-ns min-vh-100 gutters pa5-ns">
 			  { (typeof page.fields.sections != 'undefined') &&
 			      page.fields.sections.map((item) => {
 			      	return <Section {...item.fields} key={item.sys.id} />
 			      })
 			  }
 			</div>
-		</Fragment>
+		</>
 	)
 }
 
@@ -43,7 +42,7 @@ export async function getStaticProps() {
 
 	await api.getEntries({
 		'sys.id': `55s4UuuH3SkXmctxBha6o0`,
-		include: `3`
+		include: `8`
 	}).then(data => {
 	  page = data.items[0]
 	})

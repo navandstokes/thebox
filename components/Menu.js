@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Link from 'next/link'
 
 export const Menu = props => {
@@ -17,8 +16,8 @@ export const Menu = props => {
 		)
 	})
 	return (
-		<Fragment>
+		<>
 			{Links}
-		</Fragment>
+		</>
 	)
 }

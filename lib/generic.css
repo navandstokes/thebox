@@ -1,9 +1,19 @@
-body {
-	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-	/*font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;*/
-	line-height: 1.75;
-	font-size: 0.9375rem;
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
 }
+
+body {
+	background-color: #fffdfc;
+	color: #242424;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: -0.009em;
+    line-height: 1.6;
+}
+
 
 h1, h2, h3 {
 	font-family: 'Raleway', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
@@ -49,21 +59,4 @@ a:visited {
 		padding-left: 10vw;
 		padding-right: 10vw;
 	}
-}
-
-.h-50vw {
-	height: 50vw;
-}
-
-.h-75vw {
-	height: 75vw;
-}
-
-.h-100vw {
-	height: 100vw;
-}
-
-.object {
-	object-fit: cover;
-	object-position: center left;
 }

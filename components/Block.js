@@ -25,9 +25,9 @@ export const Block = props => {
 			}
 		`}</style>
 			<div className={hasImages ? "w-40-l" : ""}>
-				<h4 className="ttu fw4 mb2 f6 silver">{props.title}</h4> 
+				<h2 className="ttu fw4 mb2 f6 silver tracked">{props.title}</h2> 
 				{ (typeof props.subtitle != 'undefined') && 
-					<h2 className="f3 mt0 gray">{props.subtitle}</h2> 
+					<h3 className="f3 mt0 gray">{props.subtitle}</h3> 
 				}
 				{ (typeof props.text != 'undefined') && 
 					<Renderer content={props.text} />
