@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Icon } from 'components/Icon'
 import { Img } from 'components/Img'
 import { RemoveScroll } from 'react-remove-scroll'
 import styles from './Gallery.module.css'
