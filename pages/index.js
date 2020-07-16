@@ -49,8 +49,7 @@ export async function getStaticProps() {
 	})
 
 	return {
-		props: { page },
-		unstable_revalidate: 60
+		props: { page }
 	}
 }
 
