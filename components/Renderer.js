@@ -18,7 +18,7 @@ export const Renderer = props => {
 		    )},
 		    [INLINES.HYPERLINK]: (node) => {
 		    	return (
-		    		<Squiggle href={node.data.target}>
+		    		<Squiggle href={node.data.uri}>
 			    		{node.content[0].value}
 		    		</Squiggle>
 	    		)
@@ -47,6 +47,7 @@ const Squiggle = ({ children, href }) => {
 					font-size: 0.9rem;
 					font-weight: 600;
 					cursor: pointer;
+					color: inherit;
 				}
 				a::before {
 					content: "";
